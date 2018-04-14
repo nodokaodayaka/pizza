@@ -52,7 +52,7 @@ module.exports = class HandlePizzaOrder {
     // パラメーターが全部揃ったら実行する処理を記述します。
     finish(bot, event, context, resolve, reject){
         let message = {
-            text: `${context.confirmed.name} 様、ご注文ありがとうございました！${context.confirmed.pizza.data}の${context.confirmed.size.data}サイズを30分以内にご指定の${context.confirmed.address}までお届けに上がります。`
+            text: `${context.confirmed.name} 様へ、ご注文ありがとうございました！${context.confirmed.pizza.data}の${context.confirmed.size.data}サイズを30分以内にご指定の${context.confirmed.address}までお届けに上がります。`
         };
         return bot.reply(message).then(
             (response) => {
